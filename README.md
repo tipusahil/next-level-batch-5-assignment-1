@@ -1,7 +1,7 @@
-# next-level-batch-5-assignment-1
+# assignment-1-next-level-batch-5
 
 ## 📘 Description
-assignment-1's all problems is here...
+assignment-1's all problems is here...!!!
 ---
 
 ## 🧩 answer List:
@@ -105,3 +105,43 @@ assignment-1's all problems is here...
     const ifTheValueIsNumber = processValue(5);// ouptut: 25
     // console.log(ifTheValueIsNumber)// ouptut: 25
 
+    // -----------------------------✅ Problem 6: solution-6----------------------
+
+  interface Product {
+        name: string;
+        price: number;
+    }
+    const products: Product[] = [
+        { name: "Pen", price: 10 },
+        { name: "Notebook", price: 25 },
+        { name: "Quran", price: 1099 },
+        { name: "Bag", price: 50 }
+    ];
+
+    const getMostExpensiveProduct = (products: Product[]): Product | null => {
+
+        if(products.length == 0){ return null};
+        
+        const expensiveProdectIs: Product = products.reduce((maxExpensiveProduct: Product, currectExpensiveProduct: Product): Product => {
+            const expensive = currectExpensiveProduct.price > maxExpensiveProduct.price ? currectExpensiveProduct : maxExpensiveProduct;
+            return expensive;
+
+        })
+        return expensiveProdectIs;
+    }
+
+    const theExpensiveProductIs = getMostExpensiveProduct(products);
+    console.log(theExpensiveProductIs) // output:  { name: 'Quran', price: 1099 }
+
+    const ifArrayIsEmpty = getMostExpensiveProduct([]);
+    console.log(ifArrayIsEmpty) // output: null
+
+
+
+
+   // -----------------------------✅ Problem 7: solution-7----------------------
+
+
+
+
+   // -----------------------------✅ Problem 8: solution-8----------------------
