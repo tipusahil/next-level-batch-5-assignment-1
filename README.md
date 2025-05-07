@@ -8,13 +8,22 @@ assignment-1's all problems is here...
 
 ### ✅ Problem 1: Check if a number is even or odd
 ```ts
-// solution1.ts
-function checkEvenOdd(num: number): string {
-  return num % 2 === 0 ? "Even" : "Odd";
-}
 
-console.log(checkEvenOdd(5)); // Output: Odd
+ // -------------------------------------------------------------------solution-1:--------------------------------------------
+    const formatString = (input: string, toUpper?: boolean): string => {
+        if (toUpper) {
+            return input.toUpperCase();
+        } else {
+            return input.toLowerCase();
+        }
+    }
 
+    const inputValue1 = formatString("assalamu alaikum")
+    console.log(inputValue1)//  output: assalamu alaikum
 
-// solution2.ts
-// এখানে আপনার TypeScript কোড বসান
+    const inputValue2 = formatString("assalamu alaikum", true)
+    console.log(inputValue2)//  output: ASSALAMU ALAIKUM
+
+    const inputValue3 = formatString("assalamu alaikum", false)
+    console.log(inputValue3)//  output: assalamu alaikum
+
