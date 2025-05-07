@@ -4,12 +4,10 @@
 assignment-1's all problems is here...
 ---
 
-## 🧩 Problem List
-
-### ✅ Problem 1: Check if a number is even or odd
+## 🧩 answer List:
 ```ts
 
- // -------------------------------------------------------------------solution-1:--------------------------------------------
+ // ----------------------------------✅ Problem 1: solution-1:--------------------------------------------
     const formatString = (input: string, toUpper?: boolean): string => {
         if (toUpper) {
             return input.toUpperCase();
@@ -28,7 +26,7 @@ assignment-1's all problems is here...
     console.log(inputValue3)//  output: assalamu alaikum
 
 
-    // --------------------------------------------------------------solution-2 ------------------------------------------------------
+    // -----------------------------✅ Problem 1: solution-2 ------------------------------------------------------
     const books = [
         { title: "Unlock the Power of JavaScript", rating: 4.5 },
         { title: "Fun with HTML, CSS & JavaScript", rating: 3.2 },
