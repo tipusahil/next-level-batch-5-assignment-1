@@ -26,7 +26,7 @@ assignment-1's all problems is here...
     console.log(inputValue3)//  output: assalamu alaikum
 
 
-    // -----------------------------✅ Problem 1: solution-2 ------------------------------------------------------
+    // -----------------------------✅ Problem 2: solution-2 ------------------------------------------------------
     const books = [
         { title: "Unlock the Power of JavaScript", rating: 4.5 },
         { title: "Fun with HTML, CSS & JavaScript", rating: 3.2 },
