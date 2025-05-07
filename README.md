@@ -43,6 +43,65 @@ assignment-1's all problems is here...
         return topRatingbook1;
     }
 
-    const topRatingbook = filterByRating(books)
-    console.log(topRatingbook)
+    // -----------------------------✅ Problem 3: solution-3----------------------
+
+
+
+    // -----------------------------✅ Problem 4: solution-4----------------------
+
+   class Vehicle {
+        private _make: string; // encapsulation kora hoise.ja shudo main class theke access kora jai.
+        public year: number;
+        constructor(_make: string, year: number) {
+            this._make = _make;
+            this.year = year;
+        }
+
+        getInfo() {
+            console.log(`The Vehicle make: "${this._make}, & year: ${this.year}"`);
+        }
+
+    }
+
+    class Car extends Vehicle { // child class
+
+        constructor(_make: string, year: number, private model: string) {
+            super(_make, year);
+        }
+
+        getModel() {
+            console.log(`the "model is : ${this.model}" `);
+        }
+
+    }
+
+    const myCar = new Vehicle('Toyota', 2025);
+    const myCarModel = new Car("Toyota", 2024, "Primio");
+
+    myCar.getInfo();// output: The Vehicle make: "Toyota, & year: 2025"
+    myCarModel.getModel(); // outpu: the "model is : Primio"
+
+
+
+
+
+    // -----------------------------✅ Problem 5: solution-5----------------------
+
+    type Type_literal = string | number;
+
+    const processValue = (value: Type_literal): Type_literal => {
+        if (typeof value === "string") {
+            console.log(value.length);
+            // return value.length;
+        } else if (typeof value === "number") {
+            console.log(value * value);
+            // return value * value;
+        }
+    }
+
+    const ifTheValueIsString = processValue('hello');//  output: 5 
+    // console.log(ifTheValueIsString) // output: 5  
+
+    const ifTheValueIsNumber = processValue(5);// ouptut: 25
+    // console.log(ifTheValueIsNumber)// ouptut: 25
 
