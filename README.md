@@ -27,3 +27,24 @@ assignment-1's all problems is here...
     const inputValue3 = formatString("assalamu alaikum", false)
     console.log(inputValue3)//  output: assalamu alaikum
 
+
+    // --------------------------------------------------------------solution-2 ------------------------------------------------------
+    const books = [
+        { title: "Unlock the Power of JavaScript", rating: 4.5 },
+        { title: "Fun with HTML, CSS & JavaScript", rating: 3.2 },
+        { title: "React Explained Simply", rating: 5.0 },
+        { title: "Programming Life Story", rating: 3.0 },
+        { title: "Think in a Coder’s Way", rating: 4.0 },
+    ];
+
+
+    type TypeAlias = { title: string; rating: number };
+
+    const filterByRating = (items: TypeAlias[]): TypeAlias[] => {
+ const topRatingbook1: TypeAlias[] = items.filter((singeBook: TypeAlias) => parseInt(singeBook.rating) >= 4);
+        return topRatingbook1;
+    }
+
+    const topRatingbook = filterByRating(books)
+    console.log(topRatingbook)
+
