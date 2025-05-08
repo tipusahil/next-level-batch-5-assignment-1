@@ -17,7 +17,7 @@
     console.log(inputValue3)
 
 
-// -----
+   // -----------------------------------------
 
 
     const books = [
@@ -36,7 +36,7 @@
         return topRatingbook1;
     }
 
- // -----
+   // -----------------------------------------
 
     const concatenateArrays = <T>(...arrays: T[][]): T[] => {
         let fullArray: T[] = [];
@@ -55,7 +55,7 @@
     console.log(ifNumber);
 
 
-  // -----
+   // -----------------------------------------
 
     class Vehicle {
         private _make: string; 
@@ -66,30 +66,29 @@
         }
 
         getInfo() {
-             return `Vehicle Make: ${this._make}, Year: ${this.year}.`;
+             console.log(`Vehicle Make: ${this._make}, Year: ${this.year}.`);
         }
     }
 
-    class Car extends Vehicle {
+    class Car extends Vehicle { 
 
         constructor(_make: string, year: number, private model: string) {
             super(_make, year);
         }
 
         getModel() {
-            return `The "Model is : ${this.model}" `;
+        console.log( `The "Model is : ${this.model}" ` );
         }
 
     }
 
-    const myCar = new Car("Toyota", 2024, "Primio");
+     const myCar = new Car("Toyota", 2024, "Primio");
 
-    console.log(myCar.getInfo()); 
-    console.log(myCar.getModel());
+     myCar.getInfo() 
+     myCar.getModel() 
 
 
-
-   // ------
+   // -----------------------------------------
 
     type TypeUnion = string | number;
 
@@ -102,7 +101,7 @@
     console.log(processValue('alhadulillah'))
     console.log(processValue(7))
 
-    // -------
+   // -----------------------------------------
 
   interface Product {
         name: string;
@@ -136,7 +135,7 @@
 
 
 
-   // -------
+   // -----------------------------------------
 
 enum Day {
     Monday = "Monday",
@@ -159,7 +158,7 @@ console.log(getDayType(Day.Friday))
 console.log(getDayType(Day.Monday))
 
 
-   // -----
+   // -----------------------------------------
 
     const squareAsync = (value: number): Promise<number> => {
 
