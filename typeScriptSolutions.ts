@@ -1,5 +1,4 @@
 
- // -------------------------------✅ Problem 1: solution-1:---------------------------
     const formatString = (input: string, toUpper?: boolean): string => {
         if (toUpper) {
             return input.toUpperCase();
@@ -9,16 +8,18 @@
     }
 
     const inputValue1 = formatString("assalamu alaikum")
-    console.log(inputValue1)//  output: assalamu alaikum
+    console.log(inputValue1)
 
     const inputValue2 = formatString("assalamu alaikum", true)
-    console.log(inputValue2)//  output: ASSALAMU ALAIKUM
+    console.log(inputValue2)
 
     const inputValue3 = formatString("assalamu alaikum", false)
-    console.log(inputValue3)//  output: assalamu alaikum
+    console.log(inputValue3)
 
 
-    // ----------------------------✅ Problem 2: solution-2 -------------------------
+// -----
+
+
     const books = [
         { title: "Unlock the Power of JavaScript", rating: 4.5 },
         { title: "Fun with HTML, CSS & JavaScript", rating: 3.2 },
@@ -35,7 +36,7 @@
         return topRatingbook1;
     }
 
-    // -----------------------------✅ Problem 3: solution-3----------------------
+ // -----
 
     const concatenateArrays = <T>(...arrays: T[][]): T[] => {
         let fullArray: T[] = [];
@@ -48,13 +49,13 @@
         return fullArray
     }
 
-    const ifStirng = concatenateArrays<string>(["a", "b"], ["c"]); //output: [ 'a', 'b', 'c' ]
+    const ifStirng = concatenateArrays<string>(["a", "b"], ["c"]); 
     console.log(ifStirng);
-    const ifNumber = concatenateArrays<number>([1, 2], [3, 4], [5, 6]); // output: [ 1, 2, 3, 4, 5, 6 ] 
+    const ifNumber = concatenateArrays<number>([1, 2], [3, 4], [5, 6]); 
     console.log(ifNumber);
 
 
-  // -----------------------------✅ Problem 4: solution-4----------------------
+  // -----
 
     class Vehicle {
         private _make: string; 
@@ -69,7 +70,7 @@
         }
     }
 
-    class Car extends Vehicle { // child class
+    class Car extends Vehicle {
 
         constructor(_make: string, year: number, private model: string) {
             super(_make, year);
@@ -83,12 +84,12 @@
 
     const myCar = new Car("Toyota", 2024, "Primio");
 
-    console.log(myCar.getInfo()); // output: The Vehicle make: "Toyota, & year: 2025"
-    console.log(myCar.getModel()); // outpu: the "model is : Primio"
+    console.log(myCar.getInfo()); 
+    console.log(myCar.getModel());
 
 
 
-   // -----------------------------✅ Problem 5: solution-5----------------------
+   // ------
 
     type TypeUnion = string | number;
 
@@ -98,10 +99,10 @@
         
     }
 
-    console.log(processValue('alhadulillah'))//  output: 12
-    console.log(processValue(7)) // ouptut: 14
+    console.log(processValue('alhadulillah'))
+    console.log(processValue(7))
 
-    // -----------------------------✅ Problem 6: solution-6----------------------
+    // -------
 
   interface Product {
         name: string;
@@ -127,16 +128,15 @@
     }
 
     const theExpensiveProductIs = getMostExpensiveProduct(products);
-    console.log(theExpensiveProductIs) // output:  { name: 'Quran', price: 1099 }
+    console.log(theExpensiveProductIs)
 
     const ifArrayIsEmpty = getMostExpensiveProduct([]);
-    console.log(ifArrayIsEmpty) // output: null
+    console.log(ifArrayIsEmpty)
 
 
 
 
-   // -----------------------------✅ Problem 7: solution-7----------------------
-
+   // -------
 
 enum Day {
     Monday = "Monday",
@@ -155,11 +155,11 @@ if(day ===Day.Friday || day ===Day.Saturday){
 }
 }
 
-console.log(getDayType(Day.Friday))// output: Weekend
-console.log(getDayType(Day.Monday))// output: Weekday
+console.log(getDayType(Day.Friday))
+console.log(getDayType(Day.Monday))
 
 
-   // -----------------------------✅ Problem 8: solution-8----------------------
+   // -----
 
     const squareAsync = (value: number): Promise<number> => {
 
@@ -186,6 +186,5 @@ console.log(getDayType(Day.Monday))// output: Weekday
         return isValuePositive;
     }
 
-    showOutput(6).then(console.log) // output after 1s: 36
-    showOutput(0).catch(console.error) // output: Error: Negative number not allowed
-
+    showOutput(6).then(console.log) 
+    showOutput(0).catch(console.error) 
