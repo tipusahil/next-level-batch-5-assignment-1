@@ -7,7 +7,7 @@ assignment-1's all problems is here...!!!
 ## 🧩 answer List:
 ```ts
 
- // ----------------------------------✅ Problem 1: solution-1:--------------------------------------------
+ // -------------------------------✅ Problem 1: solution-1:---------------------------
     const formatString = (input: string, toUpper?: boolean): string => {
         if (toUpper) {
             return input.toUpperCase();
@@ -26,7 +26,7 @@ assignment-1's all problems is here...!!!
     console.log(inputValue3)//  output: assalamu alaikum
 
 
-    // -----------------------------✅ Problem 2: solution-2 ------------------------------------------------------
+    // ----------------------------✅ Problem 2: solution-2 -------------------------
     const books = [
         { title: "Unlock the Power of JavaScript", rating: 4.5 },
         { title: "Fun with HTML, CSS & JavaScript", rating: 3.2 },
@@ -145,3 +145,31 @@ assignment-1's all problems is here...!!!
 
 
    // -----------------------------✅ Problem 8: solution-8----------------------
+
+    const squareAsync = (value: number): Promise<number> => {
+
+        return new Promise<number>((resolve, reject) => {
+
+            if (value > 0) {
+                setTimeout(() => {
+                    resolve(value * value);
+                }, 1000);
+
+            }
+
+            else if (value <= 0) {
+                setTimeout(() => {
+                    reject(`Error: Negative number not allowed`)
+                }, 0);
+            }
+        })
+
+    }
+
+    const showOutput = async (value: number): Promise<number> => {
+        const isValuePositive: number = await squareAsync(value);
+        return isValuePositive;
+    }
+
+    showOutput(6).then(console.log) // output after 1s: 36
+    showOutput(0).catch(console.error) // output: Error: Negative number not allowed
