@@ -39,7 +39,7 @@ assignment-1's all problems is here...!!!
     type TypeAlias = { title: string; rating: number };
 
     const filterByRating = (items: TypeAlias[]): TypeAlias[] => {
- const topRatingbook1: TypeAlias[] = items.filter((singeBook: TypeAlias) => parseInt(singeBook.rating) >= 4);
+ const topRatingbook1: TypeAlias[] = items.filter((singeBook: TypeAlias) => singeBook.rating >= 4);
         return topRatingbook1;
     }
 
@@ -61,10 +61,11 @@ assignment-1's all problems is here...!!!
     const ifNumber = concatenateArrays<number>([1, 2], [3, 4], [5, 6]); // output: [ 1, 2, 3, 4, 5, 6 ] 
     console.log(ifNumber);
 
-    // -----------------------------✅ Problem 4: solution-4----------------------
 
-   class Vehicle {
-        private _make: string; // encapsulation kora hoise.ja shudo main class theke access kora jai.
+  // -----------------------------✅ Problem 4: solution-4----------------------
+
+    class Vehicle {
+        private _make: string; 
         public year: number;
         constructor(_make: string, year: number) {
             this._make = _make;
@@ -72,9 +73,8 @@ assignment-1's all problems is here...!!!
         }
 
         getInfo() {
-            console.log(`The Vehicle make: "${this._make}, & year: ${this.year}"`);
+             return `Vehicle Make: ${this._make}, Year: ${this.year}.`;
         }
-
     }
 
     class Car extends Vehicle { // child class
@@ -84,40 +84,30 @@ assignment-1's all problems is here...!!!
         }
 
         getModel() {
-            console.log(`the "model is : ${this.model}" `);
+            return `The "Model is : ${this.model}" `;
         }
 
     }
 
-    const myCar = new Vehicle('Toyota', 2025);
-    const myCarModel = new Car("Toyota", 2024, "Primio");
+    const myCar = new Car("Toyota", 2024, "Primio");
 
-    myCar.getInfo();// output: The Vehicle make: "Toyota, & year: 2025"
-    myCarModel.getModel(); // outpu: the "model is : Primio"
-
+    console.log(myCar.getInfo()); // output: The Vehicle make: "Toyota, & year: 2025"
+    console.log(myCar.getModel()); // outpu: the "model is : Primio"
 
 
 
+   // -----------------------------✅ Problem 5: solution-5----------------------
 
-    // -----------------------------✅ Problem 5: solution-5----------------------
+    type TypeUnion = string | number;
 
-    type Type_literal = string | number;
+    const processValue = (value: TypeUnion): TypeUnion => {
 
-    const processValue = (value: Type_literal): Type_literal => {
-        if (typeof value === "string") {
-            console.log(value.length);
-            // return value.length;
-        } else if (typeof value === "number") {
-            console.log(value * value);
-            // return value * value;
-        }
+        return typeof value ==="string" ? value.length : value * 2;
+        
     }
 
-    const ifTheValueIsString = processValue('hello');//  output: 5 
-    // console.log(ifTheValueIsString) // output: 5  
-
-    const ifTheValueIsNumber = processValue(5);// ouptut: 25
-    // console.log(ifTheValueIsNumber)// ouptut: 25
+    console.log(processValue('alhadulillah'))//  output: 12
+    console.log(processValue(7)) // ouptut: 14
 
     // -----------------------------✅ Problem 6: solution-6----------------------
 
@@ -156,6 +146,25 @@ assignment-1's all problems is here...!!!
    // -----------------------------✅ Problem 7: solution-7----------------------
 
 
+enum Day {
+    Monday = "Monday",
+    Tuesday = " Tuesday",
+    Wednesday = " Wednesday",
+    Thursday = " Thursday",
+    Friday = " Friday",
+    Saturday = " Saturday",
+    Sunday = " Sunday"
+}
+const getDayType = (day : Day) :string => {
+if(day ===Day.Friday || day ===Day.Saturday){
+    return "Weekend"
+} else {
+    return "Weekday"
+}
+}
+
+console.log(getDayType(Day.Friday))// output: Weekend
+console.log(getDayType(Day.Monday))// output: Weekday
 
 
    // -----------------------------✅ Problem 8: solution-8----------------------
