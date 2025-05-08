@@ -45,7 +45,21 @@ assignment-1's all problems is here...!!!
 
     // -----------------------------✅ Problem 3: solution-3----------------------
 
+    const concatenateArrays = <T>(...arrays: T[][]): T[] => {
+        let fullArray: T[] = [];
 
+        arrays.forEach((array1: T[]) => {
+            fullArray.push(...array1)
+
+        });
+
+        return fullArray
+    }
+
+    const ifStirng = concatenateArrays<string>(["a", "b"], ["c"]); //output: [ 'a', 'b', 'c' ]
+    console.log(ifStirng);
+    const ifNumber = concatenateArrays<number>([1, 2], [3, 4], [5, 6]); // output: [ 1, 2, 3, 4, 5, 6 ] 
+    console.log(ifNumber);
 
     // -----------------------------✅ Problem 4: solution-4----------------------
 
